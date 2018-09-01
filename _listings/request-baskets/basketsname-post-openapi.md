@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Request Baskets
 x-complete: 0
 info:
-  title: Request Baskets Get basket settings
-  description: Retrieves configuration settings of this basket.
+  title: Request Baskets Create new basket
+  description: Creates a new basket with this name.
   contact:
     name: darklynx
     url: https://github.com/darklynx
@@ -65,6 +65,25 @@ paths:
       - in: path
         name: name
         description: The basket name
+      responses:
+        200:
+          description: OK
+      tags:
+      - ""
+    post:
+      summary: Create new basket
+      description: Creates a new basket with this name.
+      operationId: baskets.name.post
+      x-api-path-slug: basketsname-post
+      parameters:
+      - in: body
+        name: config
+        description: Basket configuration
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: name
+        description: The name of new basket
       responses:
         200:
           description: OK

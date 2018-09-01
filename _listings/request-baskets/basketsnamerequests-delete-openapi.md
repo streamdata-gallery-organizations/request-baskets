@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Request Baskets
-x-complete: 1
+x-complete: 0
 info:
-  title: Request Baskets
-  description: restful-api-of-request-baskets-service
+  title: Request Baskets Delete all requests
+  description: Deletes all requests collected by this basket.
   contact:
     name: darklynx
     url: https://github.com/darklynx
@@ -135,81 +136,17 @@ paths:
           description: OK
       tags:
       - ""
-    get:
-      summary: Get collected requests
-      description: Fetches collection of requests collected by this basket.
-      operationId: baskets.name.requests.get
-      x-api-path-slug: basketsnamerequests-get
-      parameters:
-      - in: query
-        name: in
-        description: 'Defines what is taken into account when filtering is applied:
-          `body` - search in content body of collected requests,`query` - search among
-          query parameters of collected requests, `headers` - search among request
-          header values,`any` - search anywhere; default `any`'
-      - in: query
-        name: max
-        description: Maximum number of requests to return; default 20
-      - in: path
-        name: name
-        description: The basket name
-      - in: query
-        name: q
-        description: Query string to filter result, only requests that match the query
-          will be included in response
-      - in: query
-        name: skip
-        description: Number of requests to skip; default 0
-      responses:
-        200:
-          description: OK
-      tags:
-      - ""
-  /baskets/{name}/responses/{method}:
-    get:
-      summary: Get response settings
-      description: |-
-        Retrieves information about configured response of the basket. Service will reply with this response to any
-        HTTP request sent to the basket with appropriate HTTP method.
-
-        If nothing is configured, the default response is HTTP 200 - OK with empty content.
-      operationId: baskets.name.responses.method.get
-      x-api-path-slug: basketsnameresponsesmethod-get
-      parameters:
-      - in: path
-        name: method
-        description: The HTTP method this response is configured for
-      - in: path
-        name: name
-        description: The basket name
-      responses:
-        200:
-          description: OK
-      tags:
-      - ""
-    put:
-      summary: Update response settings
-      description: |-
-        Allows to configure HTTP response of this basket. The service will reply with configured response to any HTTP
-        request sent to the basket with appropriate HTTP method.
-
-        If nothing is configured, the default response is HTTP 200 - OK with empty content.
-      operationId: baskets.name.responses.method.put
-      x-api-path-slug: basketsnameresponsesmethod-put
-      parameters:
-      - in: path
-        name: method
-        description: The HTTP method this response is configured for
-      - in: path
-        name: name
-        description: The basket name
-      - in: body
-        name: response
-        description: HTTP response configuration
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - ""
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

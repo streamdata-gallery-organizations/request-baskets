@@ -1,0 +1,33 @@
+{
+	"name": "Streadata.io API Gallery - Request Baskets",
+	"description": "This is a repository of request baskets APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/request-baskets.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-31",
+	"url": "http://request-baskets.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "Request Baskets",
+			"x-api-slug": "request-baskets",
+			"description": "",
+			"image": "",
+			"humanURL": "http://rbaskets.in",
+			"baseURL": "https://rbaskets.in//",
+			"tags": "Request Baskets",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/request-baskets/master/_listings/request-baskets/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "Request Baskets",
+	"include": [
+		{
+			"name": "Request Baskets",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/request-baskets/master/_listings/request-baskets/apis.yaml"
+		}
+	]
+}
